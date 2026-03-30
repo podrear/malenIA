@@ -1,0 +1,119 @@
+"""
+Store vectoriel ChromaDB pour le RAG.
+"""
+
+import chromadb
+
+import config
+from rag.embedder import Embedder
+
+
+class VectorStore:
+    """Interface ChromaDB pour indexer et rechercher des documents."""
+
+    COLLECTION_NAME = "documents"
+
+    def __init__(self):
+        self._client = chromadb.PersistentClient(path=config.CHROMA_PERSIST_DIR)
+        self._collection = self._client.get_or_create_collection(
+            name=self.COLLECTION_NAME,
+            metadata={"hnsw:space": "cosine"},
+        )
+        self._embedder = Embedder()
+
+    @property
+    def count(self) -> int:
+        """Nombre de documents indexés."""
+        return self._collection.count()
+
+    def add_documents(self, documents: list[dict]) -> int:
+        """
+        Indexe des documents dans ChromaDB.
+
+        Args:
+            documents: liste de dicts {'text', 'source', 'chunk_id'}
+
+        Returns:
+            Nombre de documents ajoutés.
+        """
+        if not documents:
+            return 0
+
+        texts = [d["text"] for d in documents]
+        embeddings = self._embedder.encode(texts)
+        ids = [f"{d['source']}_{d['chunk_id']}" for d in documents]
+        metadatas = [{"source": d["source"], "chunk_id": d["chunk_id"]} for d in documents]
+
+        self._collection.upsert(
+            ids=ids,
+            documents=texts,
+            embeddings=embeddings,
+            metadatas=metadatas,
+        )
+        return len(documents)
+
+    def search(self, query: str, top_k: int = None) -> list[dict]:
+        """
+        Recherche les documents les plus pertinents pour une requête.
+
+        Returns:
+            Liste de dicts {'text', 'source', 'score'}
+        """
+        top_k = top_k or config.RAG_TOP_K
+
+        if self._collection.count() == 0:
+            return []
+
+        query_embedding = self._embedder.encode_single(query)
+        results = self._collection.query(
+            query_embeddings=[query_embedding],
+            n_results=min(top_k, self._collection.count()),
+        )
+
+        matches = []
+        for i in range(len(results["documents"][0])):
+            matches.append({
+                "text": results["documents"][0][i],
+                "source": results["metadatas"][0][i]["source"],
+                "score": 1 - results["distances"][0][i],  # cosine similarity
+            })
+        return matches
+
+    def add_memory(self, memory_text: str):
+        """Ajoute un souvenir de conversation au RAG."""
+        import time
+        timestamp = int(time.time())
+        doc_id = f"memory_{timestamp}"
+        embedding = self._embedder.encode_single(memory_text)
+        
+        self._collection.upsert(
+            ids=[doc_id],
+            documents=[memory_text],
+            embeddings=[embedding],
+            metadatas=[{"source": "memory", "chunk_id": timestamp}]
+        )
+
+    def inject_false_memories(self, memories: list[str]) -> int:
+        """Injecte une liste de faux souvenirs humains dans le RAG."""
+        if not memories:
+            return 0
+            
+        embeddings = self._embedder.encode(memories)
+        ids = [f"core_memory_{i}" for i in range(len(memories))]
+        metadatas = [{"source": "core_memory", "chunk_id": i} for i in range(len(memories))]
+        
+        self._collection.upsert(
+            ids=ids,
+            documents=memories,
+            embeddings=embeddings,
+            metadatas=metadatas
+        )
+        return len(memories)
+
+    def clear(self):
+        """Supprime tous les documents indexés."""
+        self._client.delete_collection(self.COLLECTION_NAME)
+        self._collection = self._client.get_or_create_collection(
+            name=self.COLLECTION_NAME,
+            metadata={"hnsw:space": "cosine"},
+        )
