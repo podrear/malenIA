@@ -1,0 +1,10 @@
+ollama
+rich
+transformers
+torch
+sentence-transformers
+chromadb
+pypdf
+SpeechRecognition
+PyAudio
+pyttsx3

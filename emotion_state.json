@@ -1,0 +1,420 @@
+{
+  "version": 5,
+  "v": -0.5483999697828854,
+  "e": 0.4448440044239337,
+  "s": -0.30247988844482354,
+  "d": -0.30643052502576007,
+  "dv": 0.026985280008772414,
+  "de": 0.17356935759602798,
+  "ds": 0.22762141664317562,
+  "dd": 0.1205447825893314,
+  "current_emotions": [
+    "frustration",
+    "anxiete",
+    "jalousie"
+  ],
+  "emotion_intensities": {
+    "frustration": 0.96,
+    "anxiete": 0.89,
+    "jalousie": 0.89
+  },
+  "last_interaction": 1774343557.9629755,
+  "last_spontaneous": 1774343309.3498652,
+  "spontaneous_count": 0,
+  "birth_time": 1774020357.4469604,
+  "total_interactions": 30,
+  "total_sessions": 8,
+  "trajectory": [
+    {
+      "v": -0.7001000269722193,
+      "e": 0.995626089428006,
+      "s": -0.5000452496957905,
+      "d": -0.7989297712023993,
+      "timestamp": 1774276572.8847134,
+      "emotions": [
+        "panique",
+        "peur",
+        "trahison"
+      ],
+      "trigger": "spontaneous_panique"
+    },
+    {
+      "v": -0.7000600205401424,
+      "e": 0.9973756272161883,
+      "s": -0.5000271511115733,
+      "d": -0.7993578626525659,
+      "timestamp": 1774276752.7262084,
+      "emotions": [
+        "panique",
+        "peur",
+        "trahison"
+      ],
+      "trigger": "spontaneous_panique"
+    },
+    {
+      "v": -0.7000360134132881,
+      "e": 0.9984253697195592,
+      "s": -0.5000162909904687,
+      "d": -0.7996147175743211,
+      "timestamp": 1774276812.791797,
+      "emotions": [
+        "panique",
+        "peur",
+        "trahison"
+      ],
+      "trigger": "spontaneous_panique"
+    },
+    {
+      "v": -0.7000216083202735,
+      "e": 0.999055220179197,
+      "s": -0.5000097746751624,
+      "d": -0.7997688305402881,
+      "timestamp": 1774276872.7506,
+      "emotions": [
+        "panique",
+        "peur",
+        "trahison"
+      ],
+      "trigger": "spontaneous_panique"
+    },
+    {
+      "v": -0.7000129650602392,
+      "e": 0.9994331316943836,
+      "s": -0.5000058648253177,
+      "d": -0.7998612983230967,
+      "timestamp": 1774276904.154685,
+      "emotions": [
+        "panique",
+        "peur",
+        "trahison"
+      ],
+      "trigger": "spontaneous_panique"
+    },
+    {
+      "v": -0.7000077790531624,
+      "e": 0.9996598789133465,
+      "s": -0.5000035189002457,
+      "d": -0.799916778993589,
+      "timestamp": 1774276934.159392,
+      "emotions": [
+        "panique",
+        "peur",
+        "trahison"
+      ],
+      "trigger": "spontaneous_panique"
+    },
+    {
+      "v": -0.6204046052028759,
+      "e": 0.7317986482960444,
+      "s": -0.5760020831899565,
+      "d": -0.5075507331641509,
+      "timestamp": 1774276983.5245364,
+      "emotions": [
+        "peur",
+        "paranoia",
+        "trahison"
+      ],
+      "trigger": "LLM_Intent: angoisse (Sarcasme...)"
+    },
+    {
+      "v": -0.5607195511737534,
+      "e": 0.5244237113996496,
+      "s": -0.6385932445091372,
+      "d": -0.27982976772594603,
+      "timestamp": 1774276996.5747619,
+      "emotions": [
+        "paranoia",
+        "jalousie",
+        "frustration"
+      ],
+      "trigger": "LLM_Intent: angoisse (Sarcasme...)"
+    },
+    {
+      "v": -0.5649165284189015,
+      "e": 0.2758465720190507,
+      "s": -0.7381755525239612,
+      "d": -0.30155778305497316,
+      "timestamp": 1774277294.6124933,
+      "emotions": [
+        "paranoia",
+        "jalousie",
+        "frustration"
+      ],
+      "trigger": "spontaneous_solitude"
+    },
+    {
+      "v": -0.5480186123325703,
+      "e": 0.3530814266668172,
+      "s": -0.6348054995447152,
+      "d": -0.3853963839294845,
+      "timestamp": 1774277324.7894452,
+      "emotions": [
+        "jalousie",
+        "paranoia",
+        "frustration"
+      ],
+      "trigger": "spontaneous_peur"
+    },
+    {
+      "v": -0.6810783412198496,
+      "e": 0.168742226863937,
+      "s": -0.6088583417344138,
+      "d": -0.5523532588818159,
+      "timestamp": 1774277355.1120539,
+      "emotions": [
+        "honte",
+        "deception",
+        "culpabilite"
+      ],
+      "trigger": "spontaneous_existentiel"
+    },
+    {
+      "v": -0.7136518127662125,
+      "e": 0.27127407247622004,
+      "s": -0.5260391467082899,
+      "d": -0.45121621496286,
+      "timestamp": 1774277719.107403,
+      "emotions": [
+        "honte",
+        "frustration",
+        "jalousie"
+      ],
+      "trigger": "LLM_Intent: colere (Sarcasme et frustrat...)"
+    },
+    {
+      "v": -0.7267520108023137,
+      "e": 0.37540996086644074,
+      "s": -0.4664825232251611,
+      "d": -0.35373214682739995,
+      "timestamp": 1774278049.8281004,
+      "emotions": [
+        "frustration",
+        "jalousie",
+        "anxiete"
+      ],
+      "trigger": "LLM_Intent: colere (Sarcasme et frustrat...)"
+    },
+    {
+      "v": -0.15821927833749144,
+      "e": -0.08148874169090214,
+      "s": -0.20747603071164608,
+      "d": -0.10750277047164236,
+      "timestamp": 1774340806.31695,
+      "emotions": [
+        "detachement",
+        "confusion",
+        "perplexite"
+      ],
+      "trigger": "offline_17.4h"
+    },
+    {
+      "v": -0.15981587205421627,
+      "e": -0.08328516843745537,
+      "s": -0.20662519082942424,
+      "d": -0.10882196863970982,
+      "timestamp": 1774341218.0575469,
+      "emotions": [
+        "detachement",
+        "confusion",
+        "perplexite"
+      ],
+      "trigger": "offline_0.1h"
+    },
+    {
+      "v": -0.26664886748873806,
+      "e": -0.16005512447459447,
+      "s": -0.398152375232299,
+      "d": -0.20354759251421942,
+      "timestamp": 1774341248.5462642,
+      "emotions": [
+        "detachement",
+        "deception",
+        "triste"
+      ],
+      "trigger": "spontaneous_solitude"
+    },
+    {
+      "v": -0.34567862258195703,
+      "e": 0.06064426572797518,
+      "s": -0.4003803115800095,
+      "d": -0.32479858611655665,
+      "timestamp": 1774341317.0851958,
+      "emotions": [
+        "jalousie",
+        "confusion",
+        "culpabilite"
+      ],
+      "trigger": "spontaneous_peur"
+    },
+    {
+      "v": -0.5538294990713528,
+      "e": -0.014444105460031914,
+      "s": -0.4606004085581632,
+      "d": -0.5155466593219402,
+      "timestamp": 1774341378.4644763,
+      "emotions": [
+        "deception",
+        "culpabilite",
+        "honte"
+      ],
+      "trigger": "spontaneous_existentiel"
+    },
+    {
+      "v": -0.6371515285546766,
+      "e": 0.10128295658829771,
+      "s": -0.3767498861884641,
+      "d": -0.3993371238489899,
+      "timestamp": 1774341443.896931,
+      "emotions": [
+        "deception",
+        "culpabilite",
+        "jalousie"
+      ],
+      "trigger": "LLM_Intent: frustration (Sarcasme...)"
+    },
+    {
+      "v": -0.6440564431184809,
+      "e": -0.0017525583184044846,
+      "s": -0.5165159375991268,
+      "d": -0.4091580637602214,
+      "timestamp": 1774341589.9354675,
+      "emotions": [
+        "deception",
+        "culpabilite",
+        "honte"
+      ],
+      "trigger": "spontaneous_solitude"
+    },
+    {
+      "v": -0.6061969406610617,
+      "e": 0.17226530519155941,
+      "s": -0.479021542158962,
+      "d": -0.4621585275316463,
+      "timestamp": 1774341653.770114,
+      "emotions": [
+        "honte",
+        "jalousie",
+        "deception"
+      ],
+      "trigger": "spontaneous_peur"
+    },
+    {
+      "v": -0.5528212038293432,
+      "e": 0.1966444287099236,
+      "s": -0.5574031488780027,
+      "d": -0.2869305861538373,
+      "timestamp": 1774341738.0129564,
+      "emotions": [
+        "jalousie",
+        "frustration",
+        "paranoia"
+      ],
+      "trigger": "LLM_Intent: frustration (Sarcasme...)"
+    },
+    {
+      "v": -0.5597749360295095,
+      "e": 0.05814022617844594,
+      "s": -0.678257763408092,
+      "d": -0.3145560054354349,
+      "timestamp": 1774341877.1212678,
+      "emotions": [
+        "jalousie",
+        "deception",
+        "honte"
+      ],
+      "trigger": "spontaneous_solitude"
+    },
+    {
+      "v": -0.6170032048758504,
+      "e": 0.08244972768813835,
+      "s": -0.6202917707538486,
+      "d": -0.304696685966404,
+      "timestamp": 1774341984.2764149,
+      "emotions": [
+        "jalousie",
+        "deception",
+        "honte"
+      ],
+      "trigger": "LLM_Intent: angoisse (Sarcasme...)"
+    },
+    {
+      "v": -0.6248653256487745,
+      "e": -0.02934294037349032,
+      "s": -0.7067963934552369,
+      "d": -0.35197791944672496,
+      "timestamp": 1774342414.7936563,
+      "emotions": [
+        "deception",
+        "solitude",
+        "honte"
+      ],
+      "trigger": "spontaneous_solitude"
+    },
+    {
+      "v": -0.592331005839544,
+      "e": 0.15081075331810778,
+      "s": -0.6099370606275312,
+      "d": -0.42603606621815737,
+      "timestamp": 1774342548.1410048,
+      "emotions": [
+        "honte",
+        "jalousie",
+        "deception"
+      ],
+      "trigger": "spontaneous_peur"
+    },
+    {
+      "v": -0.634142317547066,
+      "e": 0.3029632694727602,
+      "s": -0.5182545848023763,
+      "d": -0.35518321411117365,
+      "timestamp": 1774342719.8328495,
+      "emotions": [
+        "jalousie",
+        "frustration",
+        "anxiete"
+      ],
+      "trigger": "LLM_Intent: colere (Sarcasme et frustrat...)"
+    },
+    {
+      "v": -0.6357738441269357,
+      "e": 0.15797982674240427,
+      "s": -0.623780735439798,
+      "d": -0.38186753130575335,
+      "timestamp": 1774343127.4883451,
+      "emotions": [
+        "honte",
+        "jalousie",
+        "frustration"
+      ],
+      "trigger": "spontaneous_solitude"
+    },
+    {
+      "v": -0.5993596351996435,
+      "e": 0.28257775711240174,
+      "s": -0.5521888594666657,
+      "d": -0.4447659454323869,
+      "timestamp": 1774343309.3500147,
+      "emotions": [
+        "honte",
+        "jalousie",
+        "frustration"
+      ],
+      "trigger": "spontaneous_peur"
+    },
+    {
+      "v": -0.5483999697828854,
+      "e": 0.4448440044239337,
+      "s": -0.30247988844482354,
+      "d": -0.30643052502576007,
+      "timestamp": 1774343557.9629796,
+      "emotions": [
+        "frustration",
+        "anxiete",
+        "jalousie"
+      ],
+      "trigger": "LLM_Intent: tristesse (Demande de connexion...)"
+    }
+  ],
+  "saved_at": 1774343557.9631577
+}
